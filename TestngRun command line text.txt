@@ -1,0 +1,36 @@
+set projectLocation=D:\eclipse-workspace\SeleniumTestNGDemo
+
+cd %projectLocation%
+
+set classpath=%projectLocation%\bin;%projectLocation%\lib\*
+
+java org.testng.TestNG %projectLocation%\testng.xml
+
+pause
+
+
+D:\eclipse-workspace\SeleniumTestNGDemo>set classpath=D:\eclipse-workspace\SeleniumTestNGDemo\bin\*;D:\eclipse-workspace\SeleniumTestNGDemo\lib\*;D:\eclipse-workspace\SeleniumTestNGDemo\src\*;
+
+D:\eclipse-workspace\SeleniumTestNGDemo>java org.testng.TestNG D:\eclipse-workspace\SeleniumTestNGDemo\testng.xml
+[TestNG] [ERROR]
+Cannot find class in classpath: com.test.TestngDemo
+Exception in thread "main" java.lang.NullPointerException
+        at org.testng.TestNG.getStatus(TestNG.java:211)
+        at org.testng.TestNG.main(TestNG.java:1324)
+
+D:\eclipse-workspace\SeleniumTestNGDemo>set classpath=D:\eclipse-workspace\SeleniumTestNGDemo\bin;D:\eclipse-workspace\SeleniumTestNGDemo\lib\*;
+
+D:\eclipse-workspace\SeleniumTestNGDemo>java org.testng.TestNG D:\eclipse-workspace\SeleniumTestNGDemo\testng.xml
+Hello World!
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 19340
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+Jun 05, 2019 7:14:03 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Title = Google
+TestngDemo 1
+
+===============================================
+Suite
+Total tests run: 1, Failures: 0, Skips: 0
+===============================================
